@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Character
+  - Projectile
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Character
+    uniqueID: 2356580887
     locked: 0
