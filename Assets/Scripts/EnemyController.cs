@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     Rigidbody2D rigidbody2d;
     float timer;
     int direction = 1;
+    bool broken = true;
 
     Animator animator;
 
@@ -28,6 +29,12 @@ public class EnemyController : MonoBehaviour
             direction = -direction;
             timer = changeTime;
         }
+
+        if(!broken)
+        {
+            return;
+        }
+
 
 
 
@@ -57,7 +64,15 @@ public class EnemyController : MonoBehaviour
             player.ChangeHealth(-1);
         }
     }
-    
-        
-    
+
+    public void Fix()
+    {
+        broken = false;
+        rigidbody2d.simulated = false;
+
+        animator.SetTrigger("Fixed");
+    }
+
+
+
 }
