@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public AudioClip throwCog;
     Rigidbody2D rigidbody2d;
 
     void Awake()
@@ -32,6 +33,7 @@ public class Projectile : MonoBehaviour
         {
             e.Fix();
         }
+    
 
         Destroy(gameObject);
     }
